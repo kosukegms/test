@@ -7,7 +7,7 @@ function displayOverFive(inputArray){
 
   inputArray.forEach(function(number){
     if(number < 9){
-      console.log();
+      
       return console.log(number + " is larger than nine");
     }
 
@@ -15,4 +15,4 @@ function displayOverFive(inputArray){
 
 }
 
-displayOnlyFive(array);
+//displayOnlyFive(array);
