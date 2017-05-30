@@ -23,10 +23,16 @@ handler.on("error", function(err){
 
 });
 
+handler.on("issues", function(event) {
+  console.log("issed");
+})
+
 handler.on("push", function(event){
   const payload = event.payload;
   const repoName = payload.repository.name;
   const branch = payload.ref.split("/").pop();
+
+  console.log("received push");
 
   if(repoName === REPOSITORY_NAME && branch === "master"){
 
