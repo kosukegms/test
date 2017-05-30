@@ -1,6 +1,6 @@
 "use strict";
 
-const PORT = 4567//process.env.PORT || 8080;
+const PORT = 4000//process.env.PORT || 8080;
 const SECRET = "";
 const REPOSITORY_NAME = "test";
 
