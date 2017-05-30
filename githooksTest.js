@@ -7,7 +7,7 @@ const REPOSITORY_NAME = "test";
 const http = require("http");
 const createHandler = require("github-webhook-handler");
 const handler = createHandler({
-  path: "/",
+  path: "/payload",
   secret: SECRET
 });
 
