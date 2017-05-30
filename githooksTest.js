@@ -1,6 +1,6 @@
 "use strict";
 
-const PORT = process.env.PORT || 8080;
+const PORT = 4567//process.env.PORT || 8080;
 const SECRET = "";
 const REPOSITORY_NAME = "test";
 
@@ -11,7 +11,7 @@ const handler = createHandler({
   secret: SECRET
 });
 
-http.createServer((req, res), function(){
+http.createServer(function(req, res){
   handler(req, res, function(err){
     res.statusCode = 404;
     res.end("no such location");
@@ -29,6 +29,6 @@ handler.on("push", function(event){
   const branch = payload.ref.split("/").pop();
 
   if(repoName === REPOSITORY_NAME && branch === "master"){
-    
+
   }
 })
