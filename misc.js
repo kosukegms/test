@@ -14,5 +14,4 @@ function displayOverFive(inputArray){
   });
 
 }
-//kokos
-//displayOnlyFive(array);
+//this code is modified
