@@ -7,12 +7,12 @@ function displayOverFive(inputArray){
 
   inputArray.forEach(function(number){
     if(number < 9){
-      
+
       return console.log(number + " is larger than nine");
     }
 
   });
 
 }
-
+//kokos
 //displayOnlyFive(array);

@@ -1,13 +1,13 @@
 "use strict";
 
-const PORT = 4000//process.env.PORT || 8080;
-const SECRET = "";
+const PORT = 4001;//process.env.PORT || 8080;
+const SECRET = "test";
 const REPOSITORY_NAME = "test";
 //port changed to 3128
 const http = require("http");
 const createHandler = require("github-webhook-handler");
 const handler = createHandler({
-  path: "/",
+  path: "/payload",
   secret: SECRET
 });
 
