@@ -19,3 +19,7 @@ app.post("/github/SelfyRewards_Server/", function(req, res){
 });
 
 app.listen(PORT);
+
+//
+//  Not suffice for github webhook quite yet.
+//  github will assume deliver is failed even if this recieved the file.
