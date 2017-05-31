@@ -14,5 +14,5 @@ function displayOnlyFive(inputArray){
 
 }
 
-// displayOnlyFive(array);
+displayOnlyFive(array);
 //testest
