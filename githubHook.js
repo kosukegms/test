@@ -5,6 +5,13 @@ var express = require("express"),
 var app = express();
 var PORT = 4001;
 
+//
+//  Not suffice for github webhook quite yet.
+//  github will assume deliver is failed even if this recieved the file.
+
+
+
+
 ////for application/x-www-form-urlencoded post
 // app.use(parser.urlencoded({
 //   extended: true
@@ -19,7 +26,3 @@ app.post("/github/SelfyRewards_Server/", function(req, res){
 });
 
 app.listen(PORT);
-
-//
-//  Not suffice for github webhook quite yet.
-//  github will assume deliver is failed even if this recieved the file.
