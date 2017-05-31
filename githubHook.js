@@ -6,16 +6,16 @@ var app = express();
 var PORT = 4001;
 
 ////for application/x-www-form-urlencoded post
-app.use(parser.urlencoded({
-  extended: true
-}));
+// app.use(parser.urlencoded({
+//   extended: true
+// }));
 
 ////for application/json post
-// app.use(parser.json());
+app.use(parser.json());
 
-app.post("/payload", function(req, res){
+app.post("/github/SelfyRewards_Server/", function(req, res){
   console.log(req.body);
-  console.log(req.body["test"]);
+  ;
 });
 
 app.listen(PORT);

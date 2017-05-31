@@ -1,13 +1,14 @@
-"use strict";
+var http = require("http");
+var createHandler = require("github-webhook-handler");
 
-const PORT = 4001;//process.env.PORT || 8080;
-const SECRET = "test";
-const REPOSITORY_NAME = "test";
-//port changed to 3128
-const http = require("http");
-const createHandler = require("github-webhook-handler");
-const handler = createHandler({
-  path: "/payload",
+var PORT = 4001;
+var SECRET = "test";
+var REPOSITORY_NAME = "test";
+
+
+
+var handler = createHandler({
+  path: "/github/SelfyRewards_Server/",
   secret: SECRET
 });
 
@@ -25,16 +26,19 @@ handler.on("error", function(err){
 
 handler.on("issues", function(event) {
   console.log("issed");
-})
+});
 
 handler.on("push", function(event){
-  const payload = event.payload;
-  const repoName = payload.repository.name;
-  const branch = payload.ref.split("/").pop();
+  var payload = event.payload;
+  var repoName = payload.repository.name;
+  var branch = payload.ref.split("/").pop();
 
   console.log("received push");
 
   if(repoName === REPOSITORY_NAME && branch === "master"){
+    console.log(payload.head_commit.modified);
+    console.log(branch);
+
 
   }
-})
+});
