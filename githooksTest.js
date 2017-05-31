@@ -6,7 +6,6 @@ var SECRET = "test";
 var REPOSITORY_NAME = "test";
 
 //actually notify github webhook, the success of delivery
-//this code is modified
 
 
 var handler = createHandler({
